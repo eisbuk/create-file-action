@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p $(dirname $FILE_NAME)
+
 if [[ -z "${FILE_BASE64}" ]]; then
   echo "Using FILE_DATA to write to $FILE_NAME"
   echo $FILE_DATA > "$FILE_NAME"
